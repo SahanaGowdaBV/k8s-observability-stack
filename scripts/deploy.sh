@@ -15,6 +15,7 @@ helm install monitoring prometheus-community/kube-prometheus-stack \
 echo "Deploying logging stack..."
 kubectl apply -f logging/elasticsearch.yaml
 kubectl apply -f logging/kibana.yaml
+kubectl apply -f logging/fluentd-config.yaml
 kubectl apply -f logging/fluentd.yaml
 
 echo "Deployment complete!"
